@@ -1,5 +1,6 @@
 package com.example.myapplication
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -8,11 +9,19 @@ import android.widget.TextView
 import android.widget.Toast
 
 const val TAG = "MainActivity"
+private const val HELLO_KEY = "Hello"
+
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var nextActivityButton: Button
+    private lateinit var prevActivityButton: Button
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+
 
         Log.d(TAG, "В Академии наук")
 
@@ -20,19 +29,10 @@ class MainActivity : AppCompatActivity() {
         val resultTextView: TextView = findViewById(R.id.calcTextRes)
         var resultVar = 0
         var resultTextVar = ""
-        var mathOperandsVar = ""
-        Toast.makeText(this, "Hello, it's my first calc!", Toast.LENGTH_LONG).show()
+        var mathOperandsVar: String
 
         resultTextView.text = 0.toString()
         infTextview.text = resultTextVar
-
-
-//        fun mathOperandsFun() {
-//            val var1
-//            var1: Int, var2: Int)
-
-
-//        }
 
         val keyACButton: Button = findViewById(R.id.keyAC)
         keyACButton.setOnClickListener {
@@ -40,8 +40,6 @@ class MainActivity : AppCompatActivity() {
             resultTextVar = ""
             infTextview.text = resultTextVar
             resultTextView.text = 0.toString()
-
-
         }
 
         val key1: Button = findViewById(R.id.key1)
@@ -84,11 +82,27 @@ class MainActivity : AppCompatActivity() {
     override fun onStart() {
         super.onStart()
         Log.d(TAG, "Заседает князь Дундук")
+        Toast.makeText(this, "Welcome to calc!", Toast.LENGTH_LONG).show()
     }
 
     override fun onResume() {
         super.onResume()
         Log.d(TAG, "Говорят, не подобает")
+
+        nextActivityButton = findViewById(R.id.CalcAtcButNext)
+        nextActivityButton.setOnClickListener {
+            val secondActivityIntent = Intent(this, SecondActivity::class.java)
+            secondActivityIntent.putExtra(HELLO_KEY, "Hello from MainActivity")
+            startActivity(secondActivityIntent)
+        }
+
+        prevActivityButton = findViewById(R.id.CalcActButPrev)
+        prevActivityButton.setOnClickListener {
+            val thirdActivityIntent = Intent(this, ThirdActivity::class.java)
+            thirdActivityIntent.putExtra(HELLO_KEY, "Hello from MainActivity")
+            startActivity(thirdActivityIntent)
+        }
+
     }
 
     override fun onPause() {
@@ -99,11 +113,6 @@ class MainActivity : AppCompatActivity() {
     override fun onStop() {
         super.onStop()
         Log.d(TAG, "Почему ж он заседает?")
-    }
-
-    override fun onRestart() {
-        super.onRestart()
-//        Log.d(TAG, "6onRestart")
     }
 
     override fun onDestroy() {

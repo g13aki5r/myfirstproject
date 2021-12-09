@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="10dp"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:orientation="vertical">
 
     <com.google.android.material.chip.ChipGroup
         android:id="@+id/chipGroup"
@@ -19,10 +20,16 @@
     </com.google.android.material.chip.ChipGroup>
 
     <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
-
+        android:orientation="vertical"
+        app:layout_constraintVertical_weight="4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+<!--        tools:layout_editor_absoluteX="10dp"-->
+<!--        tools:layout_editor_absoluteY="10dp">-->
 
         <LinearLayout
             android:id="@+id/linearLayout"
@@ -38,9 +45,9 @@
                 android:id="@+id/calcTextRes"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:paddingVertical="10dp"
                 android:gravity="end|bottom"
                 android:hint="Поле вывода"
+                android:padding ="10dp"
                 android:textSize="40sp"
                 app:autoSizeTextType="uniform" />
 
@@ -48,8 +55,8 @@
                 android:id="@+id/calcText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingVertical="5dp"
                 android:gravity="start"
+                android:padding ="5dp"
                 android:text="калькулятор" />
 
 
@@ -63,36 +70,23 @@
 
             <Button
                 android:id="@+id/key7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_gravity="center"
-                android:layout_margin="5dp"
+                style="@style/btn_calc"
                 android:text="7" />
 
             <Button
                 android:id="@+id/key8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_gravity="center"
-                android:layout_margin="5dp"
+                style="@style/btn_calc"
                 android:text="8" />
+
             <Button
                 android:id="@+id/key9"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_gravity="center"
-                android:layout_margin="5dp"
+                style="@style/btn_calc"
                 android:text="9" />
+
             <Button
                 android:id="@+id/keyPlus"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_gravity="center"
-                android:layout_margin="5dp"
+                style="@style/btn_calc"
+                android:backgroundTint="#969696"
                 android:text="+" />
 
         </LinearLayout>
@@ -105,36 +99,23 @@
 
             <Button
                 android:id="@+id/key4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_gravity="center"
-                android:layout_margin="5dp"
+                style="@style/btn_calc"
                 android:text="4" />
 
             <Button
                 android:id="@+id/key5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_gravity="center"
-                android:layout_margin="5dp"
+                style="@style/btn_calc"
                 android:text="5" />
+
             <Button
                 android:id="@+id/key6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_gravity="center"
-                android:layout_margin="5dp"
+                style="@style/btn_calc"
                 android:text="6" />
+
             <Button
                 android:id="@+id/keyMinus"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_gravity="center"
-                android:layout_margin="5dp"
+                style="@style/btn_calc"
+                android:backgroundTint="#969696"
                 android:text="-" />
 
         </LinearLayout>
@@ -147,36 +128,23 @@
 
             <Button
                 android:id="@+id/key1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_gravity="center"
-                android:layout_margin="5dp"
+                style="@style/btn_calc"
                 android:text="1" />
 
             <Button
                 android:id="@+id/key2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_gravity="center"
-                android:layout_margin="5dp"
+                style="@style/btn_calc"
                 android:text="2" />
+
             <Button
                 android:id="@+id/key3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_gravity="center"
-                android:layout_margin="5dp"
+                style="@style/btn_calc"
                 android:text="3" />
+
             <Button
-                    android:id="@+id/keyMult"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_gravity="center"
-                android:layout_margin="5dp"
+                android:id="@+id/keyMult"
+                style="@style/btn_calc"
+                android:backgroundTint="#969696"
                 android:text="*" />
 
         </LinearLayout>
@@ -189,39 +157,59 @@
 
             <Button
                 android:id="@+id/keyAC"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_gravity="center"
-                android:layout_margin="5dp"
+                style="@style/btn_calc"
+                android:backgroundTint="#D90000"
                 android:text="AC" />
 
             <Button
                 android:id="@+id/key0"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_gravity="center"
-                android:layout_margin="5dp"
+                style="@style/btn_calc"
                 android:text="0" />
+
             <Button
                 android:id="@+id/keyEq"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_gravity="center"
-                android:layout_margin="5dp"
+                style="@style/btn_calc"
+                android:backgroundTint="#969696"
                 android:text="=" />
+
             <Button
                 android:id="@+id/keyDiv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_gravity="center"
-                android:layout_margin="5dp"
+                style="@style/btn_calc"
+                android:backgroundTint="#969696"
                 android:text="/" />
 
         </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_weight="1">
+
+        <Button
+            android:id="@+id/CalcActButPrev"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="@string/prev_activity"
+            style="?android:attr/buttonBarButtonStyle">
+        </Button>
+
+        <Button
+            android:id="@+id/CalcAtcButNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="@string/next_activity"
+            style="?android:attr/buttonBarButtonStyle">
+        </Button>
 
     </LinearLayout>
 

@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">MyFirstAppCalc</string>
     <string name="buttok">NewText</string>
+    <string name="prev_activity">Prev Activity</string>
+    <string name="next_activity">Next Activity</string>
 </resources>
