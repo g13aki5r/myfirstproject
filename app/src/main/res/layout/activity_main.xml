@@ -45,7 +45,7 @@
                 android:layout_height="100dp"
                 android:gravity="end|bottom"
                 android:padding ="10dp"
-                android:textSize="40sp"
+                android:textSize="50sp"
                 app:autoSizeTextType="uniform" />
 
             <TextView
@@ -53,7 +53,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="start"
-                android:textSize="20sp"
+                android:textSize="30sp"
                 android:padding ="10dp" />
 
 
