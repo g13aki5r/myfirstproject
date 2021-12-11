@@ -28,8 +28,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-<!--        tools:layout_editor_absoluteX="10dp"-->
-<!--        tools:layout_editor_absoluteY="10dp">-->
 
         <LinearLayout
             android:id="@+id/linearLayout"
@@ -46,7 +44,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:gravity="end|bottom"
-                android:hint="Поле вывода"
                 android:padding ="10dp"
                 android:textSize="40sp"
                 app:autoSizeTextType="uniform" />
@@ -56,8 +53,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="start"
-                android:padding ="5dp"
-                android:text="калькулятор" />
+                android:textSize="20sp"
+                android:padding ="10dp" />
 
 
         </LinearLayout>

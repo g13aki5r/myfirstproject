@@ -8,6 +8,35 @@
 
     <LinearLayout
         android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintVertical_weight="1"
+        android:orientation="vertical"
+        android:gravity="center">
+        <Button
+            android:id="@+id/RC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ReColor"
+            android:layout_margin="10dp"
+            android:textSize="40sp">
+
+        </Button>
+
+        <Button
+            android:id="@+id/LB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Launch browser"
+            android:backgroundTint="@color/black"
+            android:layout_margin="10dp"
+            android:textSize="20sp">
+
+        </Button>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
         android:orientation="horizontal"

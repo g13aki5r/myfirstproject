@@ -1,6 +1,7 @@
 package com.example.myapplication
 
 import android.content.Intent
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -33,4 +34,15 @@ class ThirdActivity : AppCompatActivity() {
         }
         Toast.makeText(this, "Welcome to ThirdActivity!", Toast.LENGTH_LONG).show()
     }
+
+    override fun onResume() {
+        super.onResume()
+
+        var keyRC: Button = findViewById(R.id.RC)
+        keyRC.setOnClickListener() {
+            keyRC.setBackgroundColor(Color.WHITE)
+            keyRC.setTextColor(Color.RED)
+        }
+    }
 }
+
